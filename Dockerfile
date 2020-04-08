@@ -3,3 +3,6 @@ EXPOSE 8080
 RUN rm -rf /usr/local/tomcat/webapps/*
 COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 CMD ["catalina.sh","run"]
+
+#ADD target/hello-world-rest-api.jar hello-world-rest-api.jar
+#ENTRYPOINT ["sh", "-c", "java -jar /hello-world-rest-api.jar"]
